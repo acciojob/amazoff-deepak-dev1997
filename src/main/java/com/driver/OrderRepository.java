@@ -31,6 +31,7 @@ public class OrderRepository {
     DeliveryPartner deliveryPartner=partenerDB.get(partnerId);
     int noOfOrder=deliveryPartner.getNumberOfOrders();
     noOfOrder++;
+    deliveryPartner.setNumberOfOrders(noOfOrder);
     List<String> list=new ArrayList<>();
     if(orderPartnerDB.containsKey(partnerId)){
         list=orderPartnerDB.get(partnerId);
